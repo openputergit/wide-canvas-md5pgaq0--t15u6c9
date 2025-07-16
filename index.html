@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aivoranext - AI Consulting & Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+        .particle-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        .success-message {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-blue-900">Aivoranext</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#services" class="text-gray-600 hover:text-blue-900">Services</a>
+                    <a href="#how-we-work" class="text-gray-600 hover:text-blue-900">How We Work</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-900">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-900">Contact</a>
+                </div>
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white p-4">
+            <a href="#services" class="block py-2 text-gray-600">Services</a>
+            <a href="#how-we-work" class="block py-2 text-gray-600">How We Work</a>
+            <a href="#about" class="block py-2 text-gray-600">About</a>
+            <a href="#contact" class="block py-2 text-gray-600">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center gradient-bg">
+        <div id="particles-js" class="particle-bg"></div>
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Empowering Your Business with AI Innovation</h1>
+                <p class="text-xl md:text-2xl mb-8">Aivoranext is your partner in building, integrating, and scaling Artificial Intelligence solutions tailored to your business.</p>
+                <a href="#contact" class="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-blue-900">Our Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Cards -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                    <i class="bi bi-robot text-4xl text-blue-900 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">AI Strategy Consulting</h3>
+                    <p class="text-gray-600">Expert guidance on implementing AI solutions that align with your business objectives and drive growth.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                    <i class="bi bi-code-square text-4xl text-blue-900 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Custom AI Solution Development</h3>
+                    <p class="text-gray-600">Tailored AI applications designed to solve your specific business challenges and optimize operations.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                    <i class="bi bi-gear text-4xl text-blue-900 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">AI Integration & Automation</h3>
+                    <p class="text-gray-600">Seamless integration of AI systems into your existing workflow and infrastructure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section id="how-we-work" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-blue-900">How We Work</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                        <i class="bi bi-search text-3xl text-white"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Discovery</h3>
+                    <p class="text-gray-600">Understanding your needs and objectives</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                        <i class="bi bi-lightbulb text-3xl text-white"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Ideation</h3>
+                    <p class="text-gray-600">Developing strategic solutions</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                        <i class="bi bi-gear-wide-connected text-3xl text-white"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Implementation</h3>
+                    <p class="text-gray-600">Executing the planned solution</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                        <i class="bi bi-shield-check text-3xl text-white"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Support</h3>
+                    <p class="text-gray-600">Continuous monitoring and optimization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-blue-900">About Us</h2>
+                <p class="text-xl mb-8">"At Aivoranext, our mission is to unlock business potential using ethical, scalable, and practical AI."</p>
+                <div class="grid md:grid-cols-2 gap-8 mt-12">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="font-semibold mb-4">Our Expertise</h3>
+                        <ul class="text-left space-y-2">
+                            <li><i class="bi bi-check-circle text-blue-900 mr-2"></i>Deep AI expertise</li>
+                            <li><i class="bi bi-check-circle text-blue-900 mr-2"></i>Proven client results</li>
+                            <li><i class="bi bi-check-circle text-blue-900 mr-2"></i>End-to-end solutions</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="font-semibold mb-4">Our Values</h3>
+                        <ul class="text-left space-y-2">
+                            <li><i class="bi bi-check-circle text-blue-900 mr-2"></i>Confidentiality and security</li>
+                            <li><i class="bi bi-check-circle text-blue-900 mr-2"></i>Industry-agnostic experience</li>
+                            <li><i class="bi bi-check-circle text-blue-900 mr-2"></i>Ethical AI practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-blue-900">Get in Touch</h2>
+            <div class="max-w-2xl mx-auto">
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="name">Name</label>
+                        <input type="text" id="name" required class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-900">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="company">Company</label>
+                        <input type="text" id="company" required class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-900">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="email">Email</label>
+                        <input type="email" id="email" required class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-900">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="whatsapp">WhatsApp (Optional)</label>
+                        <input type="tel" id="whatsapp" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-900">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="message">Message</label>
+                        <textarea id="message" required rows="4" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-900"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-900 text-white py-3 rounded-lg hover:bg-blue-800 transition-colors">Send Message</button>
+                </form>
+                <div id="success-message" class="success-message mt-4 p-4 bg-green-100 text-green-700 rounded-lg text-center">
+                    Thank you for reaching out. We'll be in touch soon!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact</h3>
+                    <p>Email: hello@aivoranext.com</p>
+                    <p>WhatsApp: +91-7046928404</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-blue-200"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="hover:text-blue-200"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="hover:text-blue-200"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-sm">&copy; 2024 Aivoranext. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Particle.js Configuration
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Contact Form Handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const successMessage = document.getElementById('success-message');
+            successMessage.style.display = 'block';
+            this.reset();
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
